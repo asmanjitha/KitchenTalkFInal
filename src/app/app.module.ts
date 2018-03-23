@@ -13,13 +13,24 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthService} from './service/auth.service';
+import { RecipedataService } from './service/recipedata.service';
+import { ProfileComponent } from './components/profile/profile.component';
+import { SearchpageComponent } from './components/searchpage/searchpage.component';
+import { RecipecardComponent } from './components/recipecard/recipecard.component';
+import { AddrecipeComponent } from './components/addrecipe/addrecipe.component';
+import { RedipedetailsComponent } from './components/redipedetails/redipedetails.component';
+
 
 
 
 const applicationRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'home', component: LandingpageComponent}
+  {path: 'home', component: LandingpageComponent},
+  {path: 'profile', component: ProfileComponent},
+  {path: 'search', component: SearchpageComponent},
+  {path: 'recipe/:_id', component: RedipedetailsComponent},
+  {path: 'add', component: AddrecipeComponent}
 
 ];
 
@@ -31,6 +42,11 @@ const applicationRoutes: Routes = [
     FooterComponent,
     LoginComponent,
     RegisterComponent,
+    ProfileComponent,
+    SearchpageComponent,
+    RecipecardComponent,
+    AddrecipeComponent,
+    RedipedetailsComponent,
 
   ],
   imports: [
@@ -39,7 +55,10 @@ const applicationRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(applicationRoutes)
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    RecipedataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
