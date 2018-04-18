@@ -23,6 +23,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { NavbaruserComponent } from './components/navbaruser/navbaruser.component';
 
 import { SweetAlertService } from 'angular-sweetalert-service';
+import { EditrecipecardComponent } from './components/editrecipecard/editrecipecard.component';
+import { EditrecipeComponent } from './components/editrecipe/editrecipe.component';
 
 
 const applicationRoutes: Routes = [
@@ -32,6 +34,7 @@ const applicationRoutes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'search', component: SearchpageComponent},
   {path: 'recipe/:_id', component: RedipedetailsComponent},
+  {path: 'editrecipe/:_id', component: EditrecipeComponent},
   {path: 'add', component: AddrecipeComponent},
   {path: 'admin', component: AdminComponent}
 
@@ -52,6 +55,8 @@ const applicationRoutes: Routes = [
     RedipedetailsComponent,
     AdminComponent,
     NavbaruserComponent,
+    EditrecipecardComponent,
+    EditrecipeComponent,
 
   ],
   imports: [
