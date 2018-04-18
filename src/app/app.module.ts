@@ -19,8 +19,10 @@ import { SearchpageComponent } from './components/searchpage/searchpage.componen
 import { RecipecardComponent } from './components/recipecard/recipecard.component';
 import { AddrecipeComponent } from './components/addrecipe/addrecipe.component';
 import { RedipedetailsComponent } from './components/redipedetails/redipedetails.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { NavbaruserComponent } from './components/navbaruser/navbaruser.component';
 
-
+import { SweetAlertService } from 'angular-sweetalert-service';
 
 
 const applicationRoutes: Routes = [
@@ -30,7 +32,8 @@ const applicationRoutes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'search', component: SearchpageComponent},
   {path: 'recipe/:_id', component: RedipedetailsComponent},
-  {path: 'add', component: AddrecipeComponent}
+  {path: 'add', component: AddrecipeComponent},
+  {path: 'admin', component: AdminComponent}
 
 ];
 
@@ -47,6 +50,8 @@ const applicationRoutes: Routes = [
     RecipecardComponent,
     AddrecipeComponent,
     RedipedetailsComponent,
+    AdminComponent,
+    NavbaruserComponent,
 
   ],
   imports: [
@@ -57,7 +62,8 @@ const applicationRoutes: Routes = [
   ],
   providers: [
     AuthService,
-    RecipedataService
+    RecipedataService,
+    SweetAlertService
   ],
   bootstrap: [AppComponent]
 })
