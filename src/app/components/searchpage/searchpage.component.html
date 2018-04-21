@@ -1,0 +1,68 @@
+<body class="profile-page">
+<div class="wrapper">
+  <div class="header header-filter" style="background-image: url('https://indianhealthyrecipes.com/wp-content/uploads/2015/09/swasthis-recipes-facebook.jpg'); width:100%;  "></div>
+
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+        <div class="row">
+          <div class="profile">
+            <div class="name">
+              <h3 class="title">Search Recipe</h3>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="container-fluid row " style="background: #ebdedc">
+            <div class="col-md-4">
+              <label for="sel1">Select search category (select one):</label>
+              <select class="form-control" id="sel1" name="searchcategory" [(ngModel)]="searchcategory">
+                <option>Ingredients</option>
+                <option>Occasions</option>
+                <option>Health Conditions</option>
+              </select>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Type key words" name="keyword" [(ngModel)]="keyword">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <button class="btn btn-default" (click)="recipeSearch()">
+                Search Recipes
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+              <div>
+
+                <div class=" gallery">
+                  <div >
+                    <h4 align="center">{{this.msg}}</h4>
+                  </div>
+                  <div class="tab-pane active" id="studio" *ngFor="let i of this.lis">
+                    <div class="col-sm-4">
+                      <app-recipecard [Recipe]="i" ></app-recipecard>
+                    </div>
+                  </div>
+
+                </div>
+            <!-- End Profile Tabs -->
+              </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+</body>

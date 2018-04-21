@@ -1,0 +1,63 @@
+<body class="profile-page">
+<div class="wrapper">
+  <div class="header header-filter" style="background-image: url('http://fitphysio.com.au/wp-content/uploads/2015/06/slider03-1440x511.jpg'); width:100%;  "></div>
+
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+        <div class="row">
+          <div class="profile">
+            <div class="name">
+              <h3 class="title">{{this.user.name}}</h3>
+              <h6>{{this.user.occupation}}</h6>
+              <h6>{{this.user.occupation}}</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 ">
+            <div class="profile-tabs" align="center">
+              <h5 >Email : {{this.user.email}}</h5>
+              <p> User Name: {{this.user.username}}</p>
+              <div class="nav-align-center">
+
+                <div class="tab-content gallery">
+                  <div class="tab-pane active" id="studio">
+                    <div class="row">
+                      <div class="col-md-6">
+
+                      </div>
+                      <div>
+                        <h3><b>Recipes Available for Check</b></h3>
+                        <div class=" gallery">
+                          <div >
+                            <h4 align="center">{{this.msg}}</h4>
+                          </div>
+                          <div class="tab-pane active" id="studio2" *ngFor="let i of this.lis">
+                            <div class="col-sm-4">
+                              <app-checkrecipecard [Recipe]="i" ></app-checkrecipecard>
+                            </div>
+                          </div>
+
+                        </div>
+                        <!-- End Profile Tabs -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Profile Tabs -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+</body>

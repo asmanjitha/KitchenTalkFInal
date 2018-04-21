@@ -1,0 +1,80 @@
+<body class="profile-page">
+<div class="wrapper">
+  <div class="header header-filter" style="background-image: url('https://indianhealthyrecipes.com/wp-content/uploads/2015/09/swasthis-recipes-facebook.jpg'); width:100%;  "></div>
+
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+        <div class="row" >
+          <div class="profile">
+            <div class="name">
+              <h3 class="title">Add New Recipe</h3>
+            </div>
+            <form class="form-group">
+            <div class="row col-md-6">
+              <div class="col-sm-12 col-md-12">
+                  <h4>Recipe name</h4>
+                  <input  placeholder="Enter recipe name" class="form-control" required="true" name="name" [(ngModel)]="name"/>
+                  <br>
+                  <h4>Description</h4>
+                  <textarea class="form-control" placeholder="Please enter a brief description for the recipe" rows="5" required="true"
+                            name="description" [(ngModel)]="description"></textarea>
+                  <br>
+                  <h4>Ingredients</h4>
+                  <div class="row">
+                    <input placeholder="Enter ingredients" class="form-control" name="ingredient" [(ngModel)]="ingredient">
+                    <button id="btnadd" class="btn btn-success" (click)="addIngredients()" >add recipe</button>
+
+                    <div class="row col-md-12" *ngFor="let i of ingredients">
+                      <p>{{i}}</p>
+                    </div>
+                  </div>
+                  <br>
+                  <h4>Method</h4>
+                  <textarea class="form-control" placeholder="Enter the preparation method" rows="5" required="true"
+                            name="method" [(ngModel)]="method"></textarea>
+                  <br>
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h4>Suitable Health Conditions</h4>
+              <div class="row">
+                <input name="heal" [(ngModel)]="heal" placeholder="Enter suitable health conditions" class="form-control"/>
+                <button class="btn btn-success" (click)="addHealth()">add</button>
+                <div class="row col-md-12" *ngFor="let i of health">
+                  <p>{{i}}</p>
+                </div>
+              </div>
+              <br>
+              <h4>Suitable Occasions</h4>
+              <div class="row">
+                <input name="occasion" [(ngModel)]="occasion" placeholder="Enter suitable occasions" class="form-control"/>
+                <button class="btn btn-success" (click)="addOccasions()">add</button>
+                <div class="row col-md-12" *ngFor="let i of occasions">
+                  <p>{{i}}</p>
+                </div>
+              </div>
+              <br>
+              <h4>Image</h4>
+              <input name="img" [(ngModel)]="img" placeholder="Enter image URL" class="form-control" required="true" />
+              <br>
+            </div>
+              <div class="row">
+                <button  class="btn btn-primary" (click)="saveRecipe()">Save Recipe</button>
+                <button class="btn btn-danger">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+</body>
+

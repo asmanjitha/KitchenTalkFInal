@@ -41,7 +41,8 @@ const applicationRoutes: Routes = [
   {path: 'checkrecipe/:_id', component: CheckrecipeComponent},
   {path: 'add', component: AddrecipeComponent},
   {path: 'admin', component: AdminComponent},
-  {path: 'adminlogin', component: AdminloginComponent}
+  {path: 'adminlogin', component: AdminloginComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 
 
 ];
